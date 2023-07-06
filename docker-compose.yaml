@@ -1,0 +1,25 @@
+services:
+  reservations:
+    build:
+      context: .
+      dockerfile: ./apps/reservations/Dockerfile
+      target: development
+    command:  pnpm run start:dev reservations
+    env_file:
+      - ./.env
+    ports:
+      - '9000:9000'
+    volumes:
+      - .:/usr/src/app
+  auth:
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    env_file:
+      - ./.env
+    command: pnpm run start:dev auth
+    ports:
+      - '9002:9002'
+    volumes:
+      - .:/usr/src/app

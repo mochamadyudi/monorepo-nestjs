@@ -3,9 +3,9 @@ import { ReservationsModule } from './reservations.module';
 import { ValidationPipe } from '@nestjs/common';
 import { Logger } from 'nestjs-pino';
 async function bootstrap() {
-  const app = await NestFactory.create(ReservationsModule);
-  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
-  app.useLogger(app.get(Logger));
-  await app.listen(process.env.PORT_RESERVATIONS || 9001);
+	const app = await NestFactory.create(ReservationsModule);
+	app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+	app.useLogger(app.get(Logger));
+	await app.listen(process.env.PORT_RESERVATIONS || 9000);
 }
 bootstrap();
