@@ -25,6 +25,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/reservations/tsconfig.app.json"
       }
+    },
+    "medias": {
+      "type": "application",
+      "root": "apps/medias",
+      "entryFile": "main",
+      "sourceRoot": "apps/medias/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/medias/tsconfig.app.json"
+      }
     }
   },
   "monorepo": true,
