@@ -34,6 +34,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/medias/tsconfig.app.json"
       }
+    },
+    "cash-flow": {
+      "type": "application",
+      "root": "apps/cash-flow",
+      "entryFile": "main",
+      "sourceRoot": "apps/cash-flow/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cash-flow/tsconfig.app.json"
+      }
     }
   },
   "monorepo": true,
